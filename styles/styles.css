@@ -1,1 +1,217 @@
-/* CSS */
+/* Algemeen */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: #14161c;
+  background-color: #faf8f4;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #f0663a;
+    }
+  }
+
+  ul {
+    padding: 0;
+    list-style: none;
+  }
+}
+
+main {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.skip-link {
+  position: absolute;
+  left: -100vw;
+
+  &:focus {
+    left: 1rem;
+  }
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+
+  h1 {
+    margin: 0;
+  }
+
+  img {
+    width: 8rem;
+  }
+
+  .main-nav__list {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+
+    a {
+      font-weight: bold;
+      color: #f0663a;
+    }
+
+    [aria-current="page"] {
+      text-decoration: underline;
+    }
+  }
+
+  .site-search {
+    @media (min-width: 60rem) {
+      margin-left: auto;
+    }
+  }
+}
+
+/* Knoppen */
+.button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: white;
+  background-color: #2450d8;
+  cursor: pointer;
+
+  &.button--dark {
+    background-color: #14161c;
+  }
+}
+
+/* Uitgelicht */
+.featured {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 60rem) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Lijsten met kaarten */
+.card-grid,
+.author-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 40rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card-grid {
+  @media (min-width: 60rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Kaart */
+.card {
+  background-color: white;
+
+  .card__body {
+    padding: 1rem;
+  }
+
+  .card__label {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f0663a;
+  }
+
+  .card__meta {
+    font-size: 0.9rem;
+    color: #5d6270;
+  }
+
+  &.card--large {
+    @media (min-width: 60rem) {
+      grid-row: span 2;
+    }
+  }
+
+  &.card--accent {
+    color: white;
+    background-color: #2450d8;
+
+    .card__label,
+    .card__meta {
+      color: white;
+    }
+  }
+}
+
+.author-card {
+  img {
+    width: 5rem;
+    border-radius: 50%;
+  }
+}
+
+/* Secties */
+.section {
+  .section__title {
+    padding-top: 0.5rem;
+    border-top: 3px solid;
+  }
+
+  &.section--dark {
+    padding: 1.5rem;
+    color: white;
+    background-color: #2450d8;
+  }
+}
+
+.newsletter {
+  padding: 1.5rem;
+  color: white;
+  background-color: #f0663a;
+}
+
+/* Footer */
+.site-footer {
+  padding: 2rem 1rem;
+  color: white;
+  background-color: #14161c;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+  }
+}

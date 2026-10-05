@@ -1,1 +1,178 @@
-<!-- HTML -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HvanA: onafhankelijk nieuws en opinie over de Hogeschool van Amsterdam.">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>HvanA – Nieuws en opinie over de HvA</title>
+</head>
+<body>
+
+  <a href="#main">Ga direct naar de inhoud</a>
+
+  <header>
+    <h1>
+      <a href="/">
+        <img src="images/logo-hvana.svg" alt="HvanA – nieuws en opinie over de HvA" width="260" height="70">
+      </a>
+    </h1>
+
+    <nav aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="hvana-nieuws.html" aria-current="page">Nieuws</a></li>
+        <li><a href="/video">Video</a></li>
+        <li><a href="/columns">Columns</a></li>
+        <li><a href="/opinie">Opinie</a></li>
+        <li><a href="/podcast">Podcast</a></li>
+      </ul>
+    </nav>
+
+    <search>
+      <form action="/zoeken" method="get">
+        <label for="search-query">Zoeken op HvanA</label>
+        <input type="search" id="search-query" name="q" placeholder="Zoek een artikel">
+        <button type="submit">Zoeken</button>
+      </form>
+    </search>
+  </header>
+
+  <main id="main">
+
+    <section aria-labelledby="featured-title">
+      <h2 id="featured-title">Uitgelicht</h2>
+
+      <article>
+        <img src="images/cirfood-foodcourt.jpg" alt="De foodcourt in een HvA-gebouw" width="1200" height="675">
+        <p>Nieuws</p>
+        <h3>
+          <a href="/nieuws/cirfood-stapt-naar-rechter">Cirfood stapt naar rechter over toekomst cateringmedewerkers</a>
+        </h3>
+        <p>Cirfood stapt naar de rechter vanwege een conflict met HvA en UvA over de toekomst van ongeveer vijftig cateringmedewerkers. Zij leven nog steeds in onzekerheid over hun baan.</p>
+        <p><time datetime="2026-10-05">5 oktober 2026</time> · 4 minuten lezen</p>
+      </article>
+
+      <article>
+        <img src="images/rondvraag-teksten-lezen.jpg" alt="Student met pet wordt geïnterviewd in een HvA-gebouw" width="600" height="338">
+        <p>Video</p>
+        <h3>
+          <a href="/video/teksten-lezen-voor-je-studie">Teksten lezen voor je studie? ‘Ik denk vaak: skippen die handel’</a>
+        </h3>
+        <p><time datetime="2026-10-04">4 oktober 2026</time></p>
+      </article>
+
+      <article>
+        <img src="images/disco-draait-door.jpg" alt="Illustratie van de columnist tussen woorden als studierendement en flexibel" width="600" height="338">
+        <p>Disco Draait Door</p>
+        <h3>
+          <a href="/columns/disco-draait-door-verplichte-aanwezigheid">Disco Draait Door – over verplichte aanwezigheid</a>
+        </h3>
+        <p><time datetime="2026-10-03">3 oktober 2026</time></p>
+      </article>
+    </section>
+
+    <section aria-labelledby="recent-title">
+      <h2 id="recent-title">Recent</h2>
+
+      <ul>
+        <li>
+          <article>
+            <img src="images/hva-op-rapport-week-5.jpg" alt="Student met een HvanA-microfoon op het terras" width="600" height="400" loading="lazy">
+            <p>HvA op Rapport</p>
+            <h3>
+              <a href="/video/hva-op-rapport-week-5">HvA op Rapport – week 5: ‘Alles in het Engels, dat is even wennen’</a>
+            </h3>
+            <p><time datetime="2026-10-02">2 oktober 2026</time> · Video</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/column-placeholder.jpg" alt="Columnist zittend op een trap voor een HvA-gebouw" width="600" height="400" loading="lazy">
+            <p>Column</p>
+            <h3>
+              <a href="/columns/titel-column">Titel van de column</a>
+            </h3>
+            <p><time datetime="2026-10-01">1 oktober 2026</time> · 3 minuten lezen</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/amsterdam-bier.jpg" alt="Hand met een glas bier aan het water" width="600" height="400" loading="lazy">
+            <p>Amsterdam</p>
+            <h3>
+              <a href="/nieuws/titel-artikel-amsterdam">Titel van het artikel</a>
+            </h3>
+            <p><time datetime="2026-09-30">30 september 2026</time> · 5 minuten lezen</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/amsterdam-terras.jpg" alt="Lachende student op een terras" width="600" height="400" loading="lazy">
+            <p>Amsterdam</p>
+            <h3>
+              <a href="/video/titel-rondvraag">Titel van de rondvraag</a>
+            </h3>
+            <p><time datetime="2026-09-29">29 september 2026</time> · Video</p>
+          </article>
+        </li>
+      </ul>
+
+      <p><a href="/nieuws">Bekijk alle artikelen</a></p>
+    </section>
+
+    <section aria-labelledby="opinion-title">
+      <h2 id="opinion-title">Opinie en columns</h2>
+
+      <ul>
+        <li>
+          <article>
+            <img src="images/auteur-1.jpg" alt="" width="144" height="144" loading="lazy">
+            <h3><a href="/opinie/titel-opiniestuk-1">Titel van het eerste opiniestuk</a></h3>
+            <p>Naam auteur, docent</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <img src="images/auteur-2.jpg" alt="" width="144" height="144" loading="lazy">
+            <h3><a href="/opinie/titel-opiniestuk-2">Titel van het tweede opiniestuk</a></h3>
+            <p>Naam auteur, student</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="newsletter-title">
+      <h2 id="newsletter-title">Elke week het HvA-nieuws in je mail</h2>
+      <form action="/nieuwsbrief" method="post">
+        <label for="newsletter-email">E-mailadres</label>
+        <input type="email" id="newsletter-email" name="email" autocomplete="email" required>
+        <button type="submit">Aanmelden</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <nav aria-label="Over HvanA">
+      <ul>
+        <li><a href="/over-ons">Over ons</a></li>
+        <li><a href="/redactie">Redactie</a></li>
+        <li><a href="/tip-de-redactie">Tip de redactie</a></li>
+        <li><a href="/colofon">Colofon</a></li>
+      </ul>
+    </nav>
+
+    <nav aria-label="Social media">
+      <ul>
+        <li><a href="https://x.com/">X</a></li>
+        <li><a href="https://www.instagram.com/">Instagram</a></li>
+        <li><a href="https://www.youtube.com/">YouTube</a></li>
+        <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+      </ul>
+    </nav>
+
+    <p><small>© 2026 HvanA</small></p>
+  </footer>
+
+</body>
+</html>

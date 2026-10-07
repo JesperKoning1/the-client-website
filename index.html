@@ -4,25 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="HvanA: onafhankelijk nieuws en opinie over de Hogeschool van Amsterdam.">
-  <link rel="stylesheet" href="styles/styles.css">
   <title>HvanA – Nieuws en opinie over de HvA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
 
-  <a href="#main">Ga direct naar de inhoud</a>
+  <a class="skip-link" href="#main">Ga direct naar de inhoud</a>
 
-  <!--Header-->
-  <header>
-    <h1>
-      <a href="/">
-        <img src="images/logo-hvana.svg" alt="HvanA – nieuws en opinie over de HvA" width="260" height="70">
-      </a>
+  <header class="site-header">
+    <h1 class="logo">
+      <a href="/">HvanA <span>Nieuws en opinie over de HvA</span></a>
     </h1>
 
-    <!--Nav-->
-    <nav aria-label="Hoofdmenu">
+    <button class="menu-button" type="button" popovertarget="main-nav">
+      <span aria-hidden="true">☰</span> Menu
+    </button>
+
+    <nav class="main-nav" id="main-nav" popover aria-label="Hoofdmenu">
+      <button class="menu-close" type="button" popovertarget="main-nav" popovertargetaction="hide">
+        <span aria-hidden="true">✕</span> Sluiten
+      </button>
       <ul>
-        <li><a href="hvana-nieuws.html" aria-current="page">Nieuws</a></li>
+        <li><a href="/nieuws" aria-current="page">Nieuws</a></li>
         <li><a href="/video">Video</a></li>
         <li><a href="/columns">Columns</a></li>
         <li><a href="/opinie">Opinie</a></li>
@@ -30,137 +36,134 @@
       </ul>
     </nav>
 
-    <search>
+    <search class="site-search">
       <form action="/zoeken" method="get">
-        <label for="search-query">Zoeken op HvanA</label>
+        <label class="visually-hidden" for="search-query">Zoeken op HvanA</label>
         <input type="search" id="search-query" name="q" placeholder="Zoek een artikel">
-        <button type="submit">Zoeken</button>
+        <button class="button" type="submit">Zoeken</button>
       </form>
     </search>
   </header>
 
-  <!--Main-->
   <main id="main">
 
-    <section aria-labelledby="featured-title">
-      <h2 id="featured-title">Uitgelicht</h2>
+    <section class="featured" aria-labelledby="featured-title">
+      <h2 class="visually-hidden" id="featured-title">Uitgelicht</h2>
 
-      <article>
-        <img src="images/cirfood-foodcourt.jpg" alt="De foodcourt in een HvA-gebouw" width="1200" height="675">
-        <p>Nieuws</p>
-        <h3>
-          <a href="/nieuws/cirfood-stapt-naar-rechter">Cirfood stapt naar rechter over toekomst cateringmedewerkers</a>
-        </h3>
-        <p>Cirfood stapt naar de rechter vanwege een conflict met HvA en UvA over de toekomst van ongeveer vijftig cateringmedewerkers. Zij leven nog steeds in onzekerheid over hun baan.</p>
-        <p><time datetime="2026-10-05">5 oktober 2026</time> · 4 minuten lezen</p>
+      <article class="card card--large">
+        <img src="https://picsum.photos/seed/foodcourt/1200/800" alt="De foodcourt in een HvA-gebouw" width="1200" height="800">
+        <div class="card__body">
+          <p class="card__label">Nieuws</p>
+          <h3><a href="/nieuws/cirfood-stapt-naar-rechter">Cirfood stapt naar rechter over toekomst cateringmedewerkers</a></h3>
+          <p class="card__intro">Cirfood stapt naar de rechter vanwege een conflict met HvA en UvA over de toekomst van ongeveer vijftig cateringmedewerkers. Zij leven nog steeds in onzekerheid over hun baan.</p>
+        </div>
       </article>
 
-      <article>
-        <img src="images/rondvraag-teksten-lezen.jpg" alt="Student met pet wordt geïnterviewd in een HvA-gebouw" width="600" height="338">
-        <p>Video</p>
-        <h3>
-          <a href="/video/teksten-lezen-voor-je-studie">Teksten lezen voor je studie? ‘Ik denk vaak: skippen die handel’</a>
-        </h3>
-        <p><time datetime="2026-10-04">4 oktober 2026</time></p>
+      <article class="card">
+        <img src="https://picsum.photos/seed/rondvraag/800/500" alt="Student met pet wordt geïnterviewd in een HvA-gebouw" width="800" height="500">
+        <div class="card__body">
+          <p class="card__label">Video</p>
+          <h3><a href="/video/teksten-lezen-voor-je-studie">Teksten lezen voor je studie? ‘Ik denk vaak: skippen die handel’</a></h3>
+        </div>
       </article>
 
-      <article>
-        <img src="images/disco-draait-door.jpg" alt="Illustratie van de columnist tussen woorden als studierendement en flexibel" width="600" height="338">
-        <p>Disco Draait Door</p>
-        <h3>
-          <a href="/columns/disco-draait-door-verplichte-aanwezigheid">Disco Draait Door – over verplichte aanwezigheid</a>
-        </h3>
-        <p><time datetime="2026-10-03">3 oktober 2026</time></p>
+      <article class="card">
+        <img src="https://picsum.photos/seed/disco/800/500" alt="Illustratie van de columnist tussen woorden als studierendement en flexibel" width="800" height="500">
+        <div class="card__body">
+          <p class="card__label">Disco Draait Door</p>
+          <h3><a href="/columns/disco-draait-door-verplichte-aanwezigheid">Disco Draait Door – over verplichte aanwezigheid</a></h3>
+        </div>
       </article>
     </section>
 
-    <section aria-labelledby="recent-title">
+    <section class="recent" aria-labelledby="recent-title">
       <h2 id="recent-title">Recent</h2>
 
       <ul>
         <li>
-          <article>
-            <img src="images/hva-op-rapport-week-5.jpg" alt="Student met een HvanA-microfoon op het terras" width="600" height="400" loading="lazy">
-            <p>HvA op Rapport</p>
-            <h3>
-              <a href="/video/hva-op-rapport-week-5">HvA op Rapport – week 5: ‘Alles in het Engels, dat is even wennen’</a>
-            </h3>
-            <p><time datetime="2026-10-02">2 oktober 2026</time> · Video</p>
+          <article class="card">
+            <img src="https://picsum.photos/seed/rapport/600/400" alt="Student met een HvanA-microfoon op het terras" width="600" height="400" loading="lazy">
+            <div class="card__body">
+              <p class="card__label">HvA op Rapport</p>
+              <h3><a href="/video/hva-op-rapport-week-5">HvA op Rapport – week 5: ‘Alles in het Engels, dat is even wennen’</a></h3>
+              <p class="card__meta"><time datetime="2026-10-02">2 oktober 2026</time> · Video</p>
+            </div>
           </article>
         </li>
-
         <li>
-          <article>
-            <img src="images/column-placeholder.jpg" alt="Columnist zittend op een trap voor een HvA-gebouw" width="600" height="400" loading="lazy">
-            <p>Column</p>
-            <h3>
-              <a href="/columns/titel-column">Titel van de column</a>
-            </h3>
-            <p><time datetime="2026-10-01">1 oktober 2026</time> · 3 minuten lezen</p>
+          <article class="card">
+            <img src="https://picsum.photos/seed/column/600/400" alt="Columnist zittend op een trap voor een HvA-gebouw" width="600" height="400" loading="lazy">
+            <div class="card__body">
+              <p class="card__label">Column</p>
+              <h3><a href="/columns/titel-column">Titel van de column</a></h3>
+              <p class="card__meta"><time datetime="2026-10-01">1 oktober 2026</time> · 3 min lezen</p>
+            </div>
           </article>
         </li>
-
         <li>
-          <article>
-            <img src="images/amsterdam-bier.jpg" alt="Hand met een glas bier aan het water" width="600" height="400" loading="lazy">
-            <p>Amsterdam</p>
-            <h3>
-              <a href="/nieuws/titel-artikel-amsterdam">Titel van het artikel</a>
-            </h3>
-            <p><time datetime="2026-09-30">30 september 2026</time> · 5 minuten lezen</p>
+          <article class="card">
+            <img src="https://picsum.photos/seed/amsterdam/600/400" alt="Hand met een glas bier aan het water" width="600" height="400" loading="lazy">
+            <div class="card__body">
+              <p class="card__label">Amsterdam</p>
+              <h3><a href="/nieuws/titel-artikel-amsterdam">Titel van het artikel</a></h3>
+              <p class="card__meta"><time datetime="2026-09-30">30 september 2026</time> · 5 min lezen</p>
+            </div>
           </article>
         </li>
-
         <li>
-          <article>
-            <img src="images/amsterdam-terras.jpg" alt="Lachende student op een terras" width="600" height="400" loading="lazy">
-            <p>Amsterdam</p>
-            <h3>
-              <a href="/video/titel-rondvraag">Titel van de rondvraag</a>
-            </h3>
-            <p><time datetime="2026-09-29">29 september 2026</time> · Video</p>
+          <article class="card">
+            <img src="https://picsum.photos/seed/terras/600/400" alt="Lachende student op een terras" width="600" height="400" loading="lazy">
+            <div class="card__body">
+              <p class="card__label">Amsterdam</p>
+              <h3><a href="/video/titel-rondvraag">Titel van de rondvraag</a></h3>
+              <p class="card__meta"><time datetime="2026-09-29">29 september 2026</time> · Video</p>
+            </div>
           </article>
         </li>
       </ul>
 
-      <p><a href="/nieuws">Bekijk alle artikelen</a></p>
+      <a class="more-link" href="/nieuws">Bekijk alle artikelen</a>
     </section>
 
-    <section aria-labelledby="opinion-title">
+    <section class="opinion" aria-labelledby="opinion-title">
       <h2 id="opinion-title">Opinie en columns</h2>
 
       <ul>
         <li>
-          <article>
-            <img src="images/auteur-1.jpg" alt="" width="144" height="144" loading="lazy">
-            <h3><a href="/opinie/titel-opiniestuk-1">Titel van het eerste opiniestuk</a></h3>
-            <p>Naam auteur, docent</p>
+          <article class="author">
+            <img src="https://picsum.photos/seed/auteur1/144/144" alt="" width="144" height="144" loading="lazy">
+            <div>
+              <h3><a href="/opinie/titel-opiniestuk-1">“Titel van het eerste opiniestuk”</a></h3>
+              <p>Naam auteur, docent</p>
+            </div>
           </article>
         </li>
         <li>
-          <article>
-            <img src="images/auteur-2.jpg" alt="" width="144" height="144" loading="lazy">
-            <h3><a href="/opinie/titel-opiniestuk-2">Titel van het tweede opiniestuk</a></h3>
-            <p>Naam auteur, student</p>
+          <article class="author">
+            <img src="https://picsum.photos/seed/auteur2/144/144" alt="" width="144" height="144" loading="lazy">
+            <div>
+              <h3><a href="/opinie/titel-opiniestuk-2">“Titel van het tweede opiniestuk”</a></h3>
+              <p>Naam auteur, student</p>
+            </div>
           </article>
         </li>
       </ul>
     </section>
 
-    <!--Newsletter-->
-    <section aria-labelledby="newsletter-title">
+    <section class="newsletter" aria-labelledby="newsletter-title">
       <h2 id="newsletter-title">Elke week het HvA-nieuws in je mail</h2>
       <form action="/nieuwsbrief" method="post">
         <label for="newsletter-email">E-mailadres</label>
-        <input type="email" id="newsletter-email" name="email" autocomplete="email" required>
-        <button type="submit">Aanmelden</button>
+        <input type="email" id="newsletter-email" name="email" autocomplete="email" placeholder="jouw@email.nl" required>
+        <button class="button button--dark" type="submit">Aanmelden</button>
       </form>
     </section>
 
   </main>
 
-  <!--Footer-->
-  <footer>
+  <footer class="site-footer">
+    <p class="logo">HvanA</p>
+
     <nav aria-label="Over HvanA">
       <ul>
         <li><a href="/over-ons">Over ons</a></li>
